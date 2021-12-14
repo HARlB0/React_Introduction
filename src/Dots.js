@@ -5,12 +5,12 @@ const Dot = ({ num, scrollIndex }) => {
             style={{
                 display:'flex',
                 width: '100%',
-                height: 70,
+                height: 60,
                 alignItems:'center',
                 fontWeight : "bold",
-                color :  scrollIndex === num ? "#7437ff" : "white",
-                fontFamily: "Gilroy,Arial,sans-serif",
-                fontSize: '15px',
+                color :  scrollIndex === num ? "#00D8FF" : "white",
+                fontFamily: "Urbanist",
+                fontSize: '17px',
                 backgroundColor:'transparent'
             }}
         >{num}</div>
@@ -22,8 +22,8 @@ const Dots = ({ scrollIndex }) => {
         <div style={{ position: "fixed" ,height : "100%",display:"flex",alignItems:'center' ,backgroundColor:'transparent'}}>
             <div
                 style={{ 
-                    width: '150px',
-                    paddingLeft:'15%',
+                    width: '200px',
+                    marginLeft:'30%',
                     // height:'100%',
                     alignItems:'center',
                     backgroundColor:'transparent'

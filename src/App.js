@@ -3,8 +3,9 @@ import { useState, useEffect, useRef } from "react";
 import Dots from "./Dots";
 import useScroll from './useScroll'
 
-import "./App.css";
+import "./App.scoped.css";
 import Home from "./home";
+import About from "./about";
 
 const DIVIDER_HEIGHT = 5;
 
@@ -119,7 +120,7 @@ function App() {
       </div>
       <div className="divider"></div>
       <div className="">
-        <Home />
+        <About />
       </div>
       <div className="divider"></div>
       <div className="">

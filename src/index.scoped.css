@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+@font-face {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 'ExtraBold';
+  src: url("static/fonts/Gilroy-ExtraBold.eot") format('embedded-opentype'),
+  url("static/fonts/Gilroy-ExtraBold.ttf") format('truetype'),
+  url("static/fonts/Gilroy-ExtraBold.woff") format('woff')
+}
+@font-face {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 'Light';
+  src: url("static/fonts/Gilroy-Light.eot") format('embedded-opentype'),
+  url("static/fonts/Gilroy-Light.ttf") format('truetype'),
+  url("static/fonts/Gilroy-Light.woff") format('woff')
+}
+@font-face {
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 'bold';
+  src: url("static/fonts/Urbanist-Black.ttf")  format('truetype')
+  
+}
+@font-face {
+  font-family: 'BlackHanSans';
+  font-style: normal;
+  font-weight: 'Regular';
+  src: url("static/fonts/BlackHanSans-Regular.ttf") format('truetype')
+}
+@font-face {
+  font-family: 'DungGeunMo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
