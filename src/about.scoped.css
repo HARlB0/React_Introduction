@@ -20,10 +20,10 @@
 .about .main_container .sub_container .ment {
   width: 400px;
   height: 100vh;
-  margin-left: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: 80px;
 }
 
 .about .main_container .sub_container .ment h2{
@@ -36,6 +36,119 @@
 .about .main_container .sub_container .ment ul li{
   font-size: 20px;
   color: white;
-  font-family: Gilroy;
+  font-family: EliceDigitalBaeum_Regular;
   font-weight: normal;
+}
+
+.about .main_container .sub_container .photo {
+  margin-left: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about .main_container .sub_container .photo img {
+  width: 120px;
+  height: 120px;
+}
+
+.about .main_container .sub_container .photo .email {
+  margin : 0px 50px;
+}
+
+.about .main_container .sub_container .ment h2{
+  margin-bottom: 30px;
+}
+
+.about .main_container .sub_container .ment ul{
+  font-size: 0;
+}
+
+.about .main_container .sub_container .ment ul li{
+  font-size: 20px;
+}
+
+.about .main_container .sub_container .ment #blue {
+  color: #00D8FF;
+  font-weight: bold;
+}
+
+/* 사진 180도 회전하는 애니메이션 */
+
+.about .main_container .sub_container .photo .git {
+  perspective: 300px;
+}
+
+.about .main_container .sub_container .photo .git .item {
+  backface-visibility: hidden;
+  transition: 1s;
+}
+
+.about .main_container .sub_container .photo .git .item.front {
+  position: absolute;
+  transform: rotateY(0deg);
+}
+
+.about .main_container .sub_container .photo .git:hover .item.front {
+  transform: rotateY(-180deg);
+}
+
+.about .main_container .sub_container .photo .git .item.back {
+  transform: rotateY(-180deg);
+}
+
+.about .main_container .sub_container .photo .git:hover .item.back {
+  transform: rotateY(0deg);
+}
+
+.about .main_container .sub_container .photo .email {
+  perspective: 300px;
+}
+
+.about .main_container .sub_container .photo .email .item {
+  backface-visibility: hidden;
+  transition: 1s;
+}
+
+.about .main_container .sub_container .photo .email .item.front {
+  position: absolute;
+  transform: rotateY(0deg);
+}
+
+.about .main_container .sub_container .photo .email:hover .item.front {
+  transform: rotateY(-180deg);
+}
+
+.about .main_container .sub_container .photo .email .item.back {
+  transform: rotateY(-180deg);
+}
+
+.about .main_container .sub_container .photo .email:hover .item.back {
+  transform: rotateY(0deg);
+}
+
+.about .main_container .sub_container .photo .kakao {
+  perspective: 300px;
+}
+
+.about .main_container .sub_container .photo .kakao .item {
+  backface-visibility: hidden;
+  transition: 1s;
+}
+
+.about .main_container .sub_container .photo .kakao .item.front {
+  position: absolute;
+  transform: rotateY(0deg);
+}
+
+.about .main_container .sub_container .photo .kakao:hover .item.front {
+  transform: rotateY(-180deg);
+}
+
+.about .main_container .sub_container .photo .kakao .item.back {
+  transform: rotateY(-180deg);
+}
+
+.about .main_container .sub_container .photo .kakao:hover .item.back {
+  transform: rotateY(0deg);
 }

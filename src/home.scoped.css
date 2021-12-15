@@ -34,6 +34,7 @@
   height: 220px;
 }
 
+/* 버튼 반짝이 효과 애니메이션 */
 .home .main_container .sub_container .ment button {
   margin-top: 50px;
   width: 250px;
@@ -46,8 +47,38 @@
   border-radius: 50px;
   background-color: transparent;
   border: 4px solid #00D8FF;
+	overflow: hidden;
+	position: relative;
+  display: inline-block;
+  cursor: pointer;
 }
 
+.home .main_container .sub_container .ment button {
+	z-index: 2;
+}
+
+.home .main_container .sub_container .ment button:after {
+	content: "";
+	height: 155px;
+	left: -75px;
+	opacity: .2;
+	position: absolute;
+	top: -50px;
+	background: #fff;
+	-webkit-transform: rotate(35deg);
+	transform: rotate(35deg);
+	-webkit-transition: all .55s cubic-bezier(0.19, 1, 0.22, 1);
+	transition: all .55s cubic-bezier(0.19, 1, 0.22, 1);
+	width: 50px;
+	z-index: -1;
+}
+
+.home .main_container .sub_container .ment button:hover:after {
+	left: 120%;
+}
+
+
+/* 리액트 로고 돌아가는 애니메이션 */
 .home .main_container .sub_container .react_logo {
   display: flex;
   align-items: center;
@@ -56,9 +87,12 @@
 }
 
 .home .main_container .sub_container .react_logo img {
-  width: 400px;
-  height: 400px;
-  transform:
-  translateX(calc(var(--mouse-x) * 0.1px))
-  translateY(calc(var(--mouse-y) * 0.1px));
+  animation: rotate_image 15s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes rotate_image{
+  100% {
+      transform: rotate(360deg);
+  }
 }

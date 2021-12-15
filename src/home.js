@@ -27,6 +27,7 @@ function Home() {
     return () => clearInterval(interval); // 언마운트시 setInterval을 해제
   })
 
+  
 
   return (
     <div className="home">
