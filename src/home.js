@@ -35,6 +35,7 @@ function Home() {
         <div className="sub_container">
           <div className="ment">
             <h2>Hello.<br />{Text}</h2>
+            {/* <button>Check out my work</button> */}
             <button>Check out my work</button>
           </div>
           <div className="react_logo">

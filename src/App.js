@@ -5,6 +5,7 @@ import useScroll from './useScroll'
 import "./App.scoped.css";
 import Home from "./home";
 import About from "./about";
+import Timeline from "./timeline";
 
 const DIVIDER_HEIGHT = 5;
 
@@ -218,7 +219,7 @@ function App() {
       </div>
       <div className="divider"></div>
       <div className="">
-        <Home />
+        <Timeline />
       </div>
     </div>
   );
