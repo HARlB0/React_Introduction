@@ -4,6 +4,7 @@ import useScroll from './useScroll'
 
 import "./App.scoped.css";
 import Home from "./home";
+import Works from "./works";
 import About from "./about";
 import Timeline from "./timeline";
 
@@ -211,7 +212,7 @@ function App() {
       </div>
       <div className="divider"></div>
       <div className="">
-        <Home />
+        <Works />
       </div>
       <div className="divider"></div>
       <div className="">

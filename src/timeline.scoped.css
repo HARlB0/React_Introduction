@@ -16,6 +16,7 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
+  justify-content: center;
   margin-left: 300px;
 }
 
@@ -23,5 +24,87 @@
   color: white;
 }
 
-.timeline .main_container .sub_container .history {
+.timeline .main_container .sub_container .history .progressbar {
+  display: flex;
+  flex-direction: 'row';
+  width: 900px;
+}
+
+.timeline .main_container .sub_container .history .progressbar img {
+  width: 30px;
+  height: 30px;
+}
+
+.timeline .main_container .sub_container .TLBox {
+  width: 1000px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: transparent;
+  border: 5px solid #00D8FF;
+  border-radius: 40px;
+  padding: 50px;
+}
+
+.timeline .main_container .sub_container .history .progressbar1 {
+  width: 900px;
+  overflow: hidden;
+}
+
+.timeline .main_container .sub_container .bottom {
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
+.timeline .main_container .sub_container .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+  width: 250px;
+  
+}
+
+.timeline .main_container .sub_container .buttons button {
+  width: 110px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  font-family: Urbanist;
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 3px solid #00D8FF;
+	overflow: hidden;
+	position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.timeline .main_container .sub_container .buttons button {
+	z-index: 2;
+}
+
+.timeline .main_container .sub_container .buttons button:after {
+	content: "";
+	height: 155px;
+	left: -75px;
+	opacity: .2;
+	position: absolute;
+	top: -50px;
+	background: #fff;
+	-webkit-transform: rotate(35deg);
+	transform: rotate(35deg);
+	-webkit-transition: all .55s cubic-bezier(0.19, 1, 0.22, 1);
+	transition: all .55s cubic-bezier(0.19, 1, 0.22, 1);
+	width: 50px;
+	z-index: -1;
+}
+
+.timeline .main_container .sub_container .buttons button:hover:after {
+	left: 120%;
 }
