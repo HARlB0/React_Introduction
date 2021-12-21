@@ -1,0 +1,113 @@
+
+  * {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+  }
+
+  .Works .sub_container {
+    font-family: sans-serif;
+    padding: 10px 30px;
+    
+  }
+  
+  .Works .sub_container > div {
+    /* background-color: transparent; */
+    color: #fff;
+    text-align: center;
+    height: 500px;
+    width: 1000px;
+    border-radius: 50px;
+    margin: 0px 10px;
+  }
+  
+  .hi {
+    width: 400px;
+    height: 500px;
+    /* margin: 0px 10px; */
+    box-sizing: border-box;
+    padding: 0 30px;
+  }
+  .Works .slick-slide {
+    width: 400px;
+  }
+ 
+  .Works .main_container .sub_container .hi .content {
+    width: 400px;
+    height: 500px;
+    margin: 0 auto;
+    border-radius: 50px;
+  }
+
+  .Works .main_container .sub_container .hi .content .top {
+    height: 300px;
+    width: 100%;
+    background-color: #17191b;
+    border-radius: 50px 50px 0px 0px;
+  }
+
+  .Works .main_container .sub_container .hi .content .bottom {
+    height: 200px;
+    width: 100%;
+    background-color: white;
+    border-radius: 0px 0px 50px 50px;
+  }
+
+/* 캐러셀 버튼 커스텀 */
+
+    .slick-prev:before{
+      width: 46px;
+      height: 46px;
+      content: '' !important;
+      position: absolute;
+      top: -11px;
+      left: -31px;
+      background-image: url('../src/static/images/arrow1.png');
+      background-repeat: no-repeat;
+      vertical-align: middle;
+      background-size: 46px;
+      opacity: 1 !important;
+      }
+    .slick-next:before{
+      width: 46px;
+      height: 46px;
+      content: '' !important;
+      position: absolute;
+      top: -11px;
+      left: -31px;
+      background-image: url('../src/static/images/arrow2.png');
+      background-repeat: no-repeat;
+      vertical-align: middle;
+      background-size: 46px;
+      opacity: 1 !important;
+      }
+
+
+/* 캐러셀 내용물 뒤집기 */
+
+.Works .main_container .sub_container .hi .content {
+  perspective: 300px;
+}
+
+.Works .main_container .sub_container .hi .content content {
+  backface-visibility: hidden;
+  transition: 1s;
+}
+
+.Works .main_container .sub_container .hi .content content.front {
+  position: absolute;
+  transform: rotateY(0deg);
+}
+
+.Works .main_container .sub_container .hi .content:hover content.front {
+  transform: rotateY(-180deg);
+}
+
+.Works .main_container .sub_container .hi .content content.back {
+  transform: rotateY(-180deg);
+}
+
+.Works .main_container .sub_container .hi .content:hover content.back {
+  transform: rotateY(0deg);
+}

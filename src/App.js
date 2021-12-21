@@ -1,7 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-
 import useScroll from './useScroll'
-
 import "./App.scoped.css";
 import Home from "./home";
 import Works from "./works";
@@ -20,7 +18,6 @@ function App() {
       e.preventDefault();
       const { deltaY } = e;
       const { scrollTop } = outerDivRef.current; // 스크롤 위쪽 끝부분 위치
-
 // 스크롤 시 위치 지정
       if (deltaY > 0) {
         // 스크롤 내릴 때
@@ -102,16 +99,13 @@ function App() {
         }
       }
     };
-
     const outerDivRefCurrent = outerDivRef.current;
     outerDivRefCurrent.addEventListener("wheel", wheelHandler);
     return () => {
       outerDivRefCurrent.removeEventListener("wheel", wheelHandler);
     };
   }, []);
-
   console.log(useScroll, '스크롤')
-
   // left navigation 클릭시 위치 조정
   const fnc = (val) => {
     console.log('눌림', val)
@@ -124,7 +118,6 @@ function App() {
         });
         setScrollIndex('Home');
         break;
-
       case 'Works':
         outerDivRef.current.scrollTo({
           top: pageHeight + DIVIDER_HEIGHT,
@@ -133,7 +126,6 @@ function App() {
         });
         setScrollIndex('Works');
         break;
-
       case 'About Me':
         outerDivRef.current.scrollTo({
           top: pageHeight * 2 + DIVIDER_HEIGHT * 2,
@@ -142,7 +134,6 @@ function App() {
         });
         setScrollIndex('About Me');
         break;
-
       case 'Timeline':
         outerDivRef.current.scrollTo({
           top: pageHeight * 3 + DIVIDER_HEIGHT * 3,
@@ -151,11 +142,8 @@ function App() {
         });
         setScrollIndex('Timeline');
         break;
-
-
     }
   }
-
   // dots
   const Dot = ({ num, scrollIndex }) => {
     console.log(num, '넘버', scrollIndex)
@@ -179,7 +167,6 @@ function App() {
         </div>
     );
   };
-
   const Dots = ({ scrollIndex }) => {
     return (
       <div style={{ position: "fixed", height: "100%", display: "flex", alignItems: 'center', backgroundColor: 'transparent' }}>
@@ -189,7 +176,6 @@ function App() {
             marginLeft: '30%',
             alignItems: 'center',
             backgroundColor: 'transparent'
-
           }}
         >
           <Dot num={'Home'} scrollIndex={scrollIndex}></Dot>
@@ -200,9 +186,6 @@ function App() {
       </div>
     );
   };
-
-
-
   return (
     <div ref={outerDivRef} className="outer">
       {/* <Dots scrollIndex={scrollIndex} /> */}
@@ -225,5 +208,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

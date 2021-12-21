@@ -41,10 +41,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: transparent;
-  border: 5px solid #00D8FF;
+  border: 5px solid #fff;
   border-radius: 40px;
   padding: 50px;
+  background-color: #17191b;
 }
 
 .timeline .main_container .sub_container .history .progressbar1 {
@@ -78,7 +78,7 @@
   color: white;
   border-radius: 50px;
   background-color: transparent;
-  border: 3px solid #00D8FF;
+  border: 3px solid #fff;
 	overflow: hidden;
 	position: relative;
   display: inline-block;

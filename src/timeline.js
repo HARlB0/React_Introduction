@@ -110,7 +110,7 @@ function Timeline() {
                         <div className='history'>
                             <div className='progressbar'>
                                 <div style={{ width: 9 * value, transition: '1s', overflow: 'hidden' }}>
-                                    <div style={{ height: '1px', width: '0px', backgroundColor: '00D8FF' }} className='progressbar_1' color="warning" className="mb-3" >
+                                    <div style={{ height: '1px', width: '0px', backgroundColor: '#22262A' }} className='progressbar_1' color="warning" className="mb-3" >
                                     </div>
                                 </div>
                                 <div>
@@ -119,7 +119,7 @@ function Timeline() {
                             </div>
                             <div className='progressbar1'>
                                 <div style={{ position: 'relative', height: '5px', width: 9 * value, transition: '1s', backgroundColor: '#00D8FF', borderRadius: '50px' }} className='progressbar_1' color="warning" className="mb-3" >
-                                    <div style={{ position: 'absolute', height: '5px', width: '0px', backgroundColor: '#00D8FF' }} className='progressbar_1' color="warning" value={value} className="mb-3" />
+                                    <div style={{ position: 'absolute', height: '5px', width: '0px', backgroundColor: '#22262A' }} className='progressbar_1' color="warning" value={value} className="mb-3" />
                                 </div>
                             </div>
                         </div>

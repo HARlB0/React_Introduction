@@ -87,7 +87,7 @@
 }
 
 .home .main_container .sub_container .react_logo img {
-  animation: rotate_image 15s linear infinite;
+  animation: rotate_image 15s , linear infinite;
   transform-origin: 50% 50%;
 }
 
