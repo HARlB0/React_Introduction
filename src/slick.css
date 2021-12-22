@@ -16,10 +16,19 @@
     /* background-color: transparent; */
     color: #fff;
     text-align: center;
-    height: 500px;
+    height: 600px;
     width: 1000px;
     border-radius: 50px;
     margin: 0px 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  
+  .Works .slick-slide{
+    height: 600px;
+    display: flex;
+    align-items: center;
   }
   
   .hi {
@@ -38,19 +47,38 @@
     height: 500px;
     margin: 0 auto;
     border-radius: 50px;
+    overflow:hidden
   }
 
   .Works .main_container .sub_container .hi .content .top {
-    height: 300px;
+    height: 500px;
     width: 100%;
-    background-color: #17191b;
     border-radius: 50px 50px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .Works .main_container .sub_container .hi .content .bottom {
+    /* border-top: 4px solid black;
     height: 200px;
     width: 100%;
     background-color: white;
+    border-radius: 0px 0px 50px 50px;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center; */
+  }
+
+  .Works .main_container .sub_container .hi .content .top1 {
+    height: 300px;
+    width: 100%;
+    border-radius: 50px 50px 0px 0px;
+  }
+
+  .Works .main_container .sub_container .hi .content .bottom1 {
+    height: 200px;
+    width: 100%;
     border-radius: 0px 0px 50px 50px;
   }
 
@@ -69,6 +97,7 @@
       background-size: 46px;
       opacity: 1 !important;
       }
+      
     .slick-next:before{
       width: 46px;
       height: 46px;
@@ -86,28 +115,50 @@
 
 /* 캐러셀 내용물 뒤집기 */
 
-.Works .main_container .sub_container .hi .content {
-  perspective: 300px;
+.Works .main_container .sub_container .hi  {
+  perspective: 1000px;
 }
 
-.Works .main_container .sub_container .hi .content content {
+.Works .main_container .sub_container .hi .content  {
   backface-visibility: hidden;
   transition: 1s;
 }
 
-.Works .main_container .sub_container .hi .content content.front {
+.Works .main_container .sub_container .hi .content.front {
   position: absolute;
   transform: rotateY(0deg);
 }
 
-.Works .main_container .sub_container .hi .content:hover content.front {
+.Works .main_container .sub_container .hi:hover .content.front {
   transform: rotateY(-180deg);
 }
 
-.Works .main_container .sub_container .hi .content content.back {
+.Works .main_container .sub_container .hi .content.back {
   transform: rotateY(-180deg);
 }
 
-.Works .main_container .sub_container .hi .content:hover content.back {
+.Works .main_container .sub_container .hi:hover .content.back {
   transform: rotateY(0deg);
+}
+
+
+.Works .main_container .sub_container .hi .content .bottom ul li {
+  display: flex;
+  color:black;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: EliceDigitalBaeum_Regular;
+  text-align: start;
+  
+}
+
+.Works .main_container .sub_container .hi .content .bottom ul #pj_title {
+ font-size: 20px;
+ font-weight: bold;
+ font-family: EliceDigitalBaeum_Regular;
+ 
+}
+.Works .main_container .sub_container .hi .content .top img {
+  /* width: 350px;
+  background-color: #4B4B4B; */
 }
