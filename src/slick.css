@@ -1,116 +1,143 @@
 
-  * {
-    margin: 0; padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style-type: none;
-  }
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
 
-  .Works .sub_container {
-    font-family: sans-serif;
-    padding: 10px 30px;
-    
-  }
+.Works .sub_container {
+  font-family: sans-serif;
+  padding: 10px 30px;
   
-  .Works .sub_container > div {
-    /* background-color: transparent; */
-    color: #fff;
-    text-align: center;
-    height: 600px;
-    width: 1000px;
-    border-radius: 50px;
-    margin: 0px 10px;
-    display: flex;
-    align-items: center;
-  }
+}
 
-  
-  .Works .slick-slide{
-    height: 600px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .hi {
-    width: 400px;
-    height: 500px;
-    /* margin: 0px 10px; */
-    box-sizing: border-box;
-    padding: 0 30px;
-  }
-  .Works .slick-slide {
-    width: 400px;
-  }
- 
-  .Works .main_container .sub_container .hi .content {
-    width: 400px;
-    height: 500px;
-    margin: 0 auto;
-    border-radius: 50px;
-    overflow:hidden
-  }
+.Works .sub_container > div {
+  /* background-color: transparent; */
+  color: #fff;
+  text-align: center;
+  height: 600px;
+  width: 1000px;
+  border-radius: 50px;
+  margin: 0px 10px;
+  display: flex;
+  align-items: center;
+}
 
-  .Works .main_container .sub_container .hi .content .top {
-    height: 500px;
-    width: 100%;
-    border-radius: 50px 50px 0px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 
-  .Works .main_container .sub_container .hi .content .bottom {
-    /* border-top: 4px solid black;
-    height: 200px;
-    width: 100%;
-    background-color: white;
-    border-radius: 0px 0px 50px 50px;
-    padding: 0px 20px;
-    display: flex;
-    align-items: center; */
-  }
+.Works .slick-slide{
+  height: 600px;
+  display: flex;
+  align-items: center;
+}
 
-  .Works .main_container .sub_container .hi .content .top1 {
-    height: 300px;
-    width: 100%;
-    border-radius: 50px 50px 0px 0px;
-  }
+.hi {
+  width: 400px;
+  height: 400px;
+  /* margin: 0px 10px; */
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 30px;
+}
+.Works .slick-slide {
+  width: 400px;
+}
 
-  .Works .main_container .sub_container .hi .content .bottom1 {
-    height: 200px;
-    width: 100%;
-    border-radius: 0px 0px 50px 50px;
-  }
+.Works .main_container .sub_container .hi .content {
+  width: 380px;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow:hidden
+}
+
+.Works .main_container .sub_container .hi .content .top {
+  height: 400px;
+  width: 100%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #17191b;
+}
+
+.Works .main_container .sub_container .hi .content .bottom {
+  /* border-top: 4px solid black;
+  height: 200px;
+  width: 100%;
+  background-color: white;
+  border-radius: 0px 0px 50px 50px;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center; */
+}
+
+.Works .main_container .sub_container .hi .content .top1 {
+  height: 400px;
+  width: 100%;
+  background-color: #17191b;
+  padding: 40px;
+}
+
+.Works .main_container .sub_container .hi .content .top1 h3 {
+  color: white;
+  font-size: 45px;
+  font-family: Urbanist;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.Works .main_container .sub_container .hi .content .top1 ul li {
+  display: flex;
+  font-size: 20px;
+  color: white;
+  font-family: Urbanist;
+  font-weight: normal;
+}
+
+.Works .main_container .sub_container .hi .content .top1 ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.Works .main_container .sub_container .hi .content .top1 #logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
 
 /* 캐러셀 버튼 커스텀 */
 
-    .slick-prev:before{
-      width: 46px;
-      height: 46px;
-      content: '' !important;
-      position: absolute;
-      top: -11px;
-      left: -31px;
-      background-image: url('../src/static/images/arrow1.png');
-      background-repeat: no-repeat;
-      vertical-align: middle;
-      background-size: 46px;
-      opacity: 1 !important;
-      }
-      
-    .slick-next:before{
-      width: 46px;
-      height: 46px;
-      content: '' !important;
-      position: absolute;
-      top: -11px;
-      left: -31px;
-      background-image: url('../src/static/images/arrow2.png');
-      background-repeat: no-repeat;
-      vertical-align: middle;
-      background-size: 46px;
-      opacity: 1 !important;
-      }
+.slick-prev:before{
+  width: 46px;
+  height: 46px;
+  content: '' !important;
+  position: absolute;
+  top: -11px;
+  left: -31px;
+  background-image: url('../src/static/images/arrow1.png');
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  background-size: 46px;
+  opacity: 1 !important;
+  }
+  
+.slick-next:before{
+  width: 46px;
+  height: 46px;
+  content: '' !important;
+  position: absolute;
+  top: -11px;
+  left: -31px;
+  background-image: url('../src/static/images/arrow2.png');
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  background-size: 46px;
+  opacity: 1 !important;
+  }
 
 
 /* 캐러셀 내용물 뒤집기 */
@@ -158,7 +185,26 @@
  font-family: EliceDigitalBaeum_Regular;
  
 }
+
 .Works .main_container .sub_container .hi .content .top img {
-  /* width: 350px;
-  background-color: #4B4B4B; */
+  background-color: #17191b;
+  width: 200px;
+  height: 200px;
+}
+
+.Works .main_container .sub_container .hi .content {
+  box-shadow: 10px 10px 10px #000000;
+}
+
+.Works .main_container .sub_container .hi .content .top span {
+  color: white;
+  margin-top: 30px;
+  font-size: 45px;
+  font-family: Urbanist;
+  font-weight: bold;
+}
+
+.Works .main_container .sub_container .hi .content .top1 ul li img {
+  width: 100px;
+  height: 100px;
 }
