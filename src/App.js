@@ -5,12 +5,14 @@ import Home from "./home";
 import Works from "./works";
 import About from "./about";
 import Timeline from "./timeline";
+import more from "./static/images/more.png";
 
 const DIVIDER_HEIGHT = 5;
 
 function App() {
   const outerDivRef = useRef();
   const [scrollIndex, setScrollIndex] = useState('Home');
+  const [hamburger, setHamburger] = useState(false);
   const [move, setMove] = useState('');
   const pageHeight = window.innerHeight; // 화면 세로길이, 100vh와 같습니다.
   useEffect(() => {
@@ -18,7 +20,7 @@ function App() {
       e.preventDefault();
       const { deltaY } = e;
       const { scrollTop } = outerDivRef.current; // 스크롤 위쪽 끝부분 위치
-// 스크롤 시 위치 지정
+      // 스크롤 시 위치 지정
       if (deltaY > 0) {
         // 스크롤 내릴 때
         if (scrollTop >= 0 && scrollTop < pageHeight) {
@@ -151,45 +153,69 @@ function App() {
       <div
         style={{
           display: 'flex',
-          width: '100%',
           height: 60,
           alignItems: 'center',
         }}
       >
-        <div onClick={() => { fnc(num)}} style={{
-        cursor: 'pointer',
-        fontWeight: "bold",
-        color: scrollIndex === num ? "#61DAFB" : "white",
-        fontFamily: "Urbanist",
-        fontSize: '17px',
-        backgroundColor: 'transparent'}}>{num}
+        <div onClick={() => { fnc(num) }} style={{
+          cursor: 'pointer',
+          fontWeight: "bold",
+          color: scrollIndex === num ? "#61DAFB" : "white",
+          fontFamily: "Urbanist",
+          fontSize: '17px',
+          backgroundColor: 'transparent'
+        }}>{num}
         </div>
-        </div>
+      </div>
     );
   };
   const Dots = ({ scrollIndex }) => {
     return (
-      <div style={{ position: "fixed", height: "100%", display: "flex", alignItems: 'center', backgroundColor: 'transparent' }}>
-        <div
-          style={{
-            width: '200px',
-            marginLeft: '30%',
-            alignItems: 'center',
-            backgroundColor: 'transparent'
-          }}
-        >
+     
+        <div className="left_bar">
           <Dot num={'Home'} scrollIndex={scrollIndex}></Dot>
           <Dot num={'Works'} scrollIndex={scrollIndex}></Dot>
           <Dot num={'About Me'} scrollIndex={scrollIndex}></Dot>
           <Dot num={'Timeline'} scrollIndex={scrollIndex}></Dot>
         </div>
-      </div>
     );
   };
   return (
     <div ref={outerDivRef} className="outer">
       {/* <Dots scrollIndex={scrollIndex} /> */}
+      <div style={{ position: "fixed", height: "100%", display: "flex", alignItems: 'center', backgroundColor: 'transparent' }}>
+
       {Dots({ scrollIndex })}
+      </div>
+      {hamburger == true ?
+
+        <div className="right_bar">
+          
+            <div className="left_bar1" style={{ display: "flex", flexDirection: 'column', justifyContent: 'flex-end' }}>
+              <div className="hamburger" style={{ zIndex: 500}} onClick={() => { setHamburger(!hamburger) }}>
+                <img style={{ margin: "40px" }} src={more} />
+              </div>
+
+              <div className="ham_list" style={{ height:'100vh'}}>
+                <Dot num={'Home'} scrollIndex={scrollIndex}></Dot>
+                <Dot num={'Works'} scrollIndex={scrollIndex}></Dot>
+                <Dot num={'About Me'} scrollIndex={scrollIndex}></Dot>
+                <Dot num={'Timeline'} scrollIndex={scrollIndex}></Dot>
+              </div>
+            </div>
+
+          </div>
+        :
+
+        <div style={{ position: "fixed", width: "130px", height: '130px', right: 0, display: "flex", backgroundColor: 'transparent' }}>
+          <div className="left_bar1" style={{ display: "flex", flexDirection: 'column', justifyContent: 'flex-end' }}>
+            <div className="hamburger" style={{ zIndex: 500 }} onClick={() => { setHamburger(!hamburger) }}>
+              <img style={{ margin: "40px" }} src={more} />
+            </div>
+          </div>
+        </div>
+
+      }
       <div className="">
         <Home />
       </div>

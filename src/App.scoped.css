@@ -15,6 +15,13 @@ body {
   overflow-y: auto;
 }
 
+.outer .left_bar {
+  width: 200px;
+  margin-left: 60px;
+  align-items: center;
+  background-color: transparent;
+}
+
 /* 화면에서 스크롤바 안보이게 */
 .outer::-webkit-scrollbar {
   display: none;
@@ -44,4 +51,60 @@ body {
   width: 100%;
   height: 5px;
   background-color: #22262A;
+}
+
+.hamburger img {
+  display: none;
+  width: 40px;
+  height: 40px;
+}
+
+.right_bar {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .outer .left_bar {
+    display: none;
+  }
+  
+  .hamburger img {
+    display: flex;
+    width: 50px;
+    height: 50px;
+  }
+
+  .top_bar div {
+    display: flex;
+    width: 80px;
+  }
+
+  .right_bar {
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    height: 100vh;
+    background-color: #17191b;
+    width: 250px;
+    right: 0;
+    z-index: 400;
+    box-shadow: 10px 10px 80px #000000;
+  }
+  
+  .left_bar1 .ham_list div {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .left_bar1 .ham_list {
+    margin-right: 40px;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+
+  .right_bar {
+    width: 200px;
+  }
 }

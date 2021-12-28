@@ -14,12 +14,14 @@
 .home .main_container .sub_container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
   height: 100%;
   width: 100%;
+  padding-right: 100px;
 }
 .home .main_container .sub_container .ment {
   width: 400px;
-  height: 100vh;
   margin-left: 300px;
   display: flex;
   flex-direction: column;
@@ -32,6 +34,7 @@
   font-family: Urbanist;
   font-weight: bold;
   height: 220px;
+  width: 400px;
 }
 
 /* 버튼 반짝이 효과 애니메이션 */
@@ -83,16 +86,119 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 80px;
 }
 
 .home .main_container .sub_container .react_logo img {
   animation: rotate_image 15s , linear infinite;
   transform-origin: 50% 50%;
+  width: 400px;
+  height: 400px;
+  z-index: 300;
 }
 
 @keyframes rotate_image{
   100% {
       transform: rotate(360deg);
+  }
+}
+
+
+/* 미디어 쿼리 */
+
+@media screen and (max-width: 1200px) {
+
+  .home .main_container .sub_container .ment {
+    width: 300px;
+    margin-left: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .home .main_container .sub_container .ment h2 {
+    font-size: 40px;
+    width: 300px;
+    height: 240px;
+  }
+
+  .home .main_container .sub_container .react_logo img {
+    width: 325px;
+    height: 325px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  .home .main_container .sub_container .ment {
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 250px;
+  }
+
+  .home .main_container .sub_container .ment h2 {
+    font-size: 35px;
+    width: 250px;
+    height: 220px;
+  }
+
+  .home .main_container .sub_container .ment button {
+    margin-top: 20px;
+  }
+
+  .home .main_container .sub_container {
+    padding-right: 30px;
+  }
+
+  .home .main_container .sub_container .react_logo img {
+    max-width: 300px;
+    width: 40vw;
+    height: 40vw;
+    max-height: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .home .main_container .sub_container .ment {
+    margin-left: 30px;
+  }
+
+  .home .main_container .sub_container .ment h2 {
+    font-size: 35px;
+    width: 250px;
+    height: 220px;
+  }
+
+  .home .main_container .sub_container .ment button {
+    margin-top: 20px;
+  }
+
+  .home .main_container .sub_container {
+    padding-right: 30px;
+  }
+
+  /* .home .main_container .sub_container .react_logo img {
+    width: 300px;
+    height: 300px;
+  } */
+}
+@media screen and (max-width: 480px) {
+
+  .home .main_container .sub_container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .home .main_container .sub_container .ment {
+    height: 350px;
+    margin-left: 0px;
+  }
+
+  .home .main_container .sub_container .react_logo img {
+    width: 200px;
+    height: 200px;
   }
 }

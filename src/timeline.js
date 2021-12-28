@@ -109,7 +109,7 @@ function Timeline() {
                         <span>{progressment()}</span>
                         <div className='history'>
                             <div className='progressbar'>
-                                <div style={{ width: 9 * value-15, transition: '1s', overflow: 'hidden' }}>
+                                <div style={{ width: 9 * value, transition: '1s', overflow: 'hidden' }}>
                                     <div style={{ height: '1px', width: '0px', backgroundColor: '#22262A' }} className='progressbar_1' color="warning" className="mb-3" >
                                     </div>
                                 </div>

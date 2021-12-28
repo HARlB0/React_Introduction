@@ -43,7 +43,6 @@
 .Works .slick-slide {
   width: 400px;
 }
-
 .Works .main_container .sub_container .hi .content {
   width: 380px;
   height: 400px;
@@ -207,4 +206,63 @@
 .Works .main_container .sub_container .hi .content .top1 ul li img {
   width: 100px;
   height: 100px;
+}
+
+@media screen and (max-width: 1200px) {
+
+
+  .Works .sub_container > div {
+    /* background-color: transparent; */
+    color: #fff;
+    text-align: center;
+    height: 500px;
+    width: 800px;
+    border-radius: 50px;
+    margin: 0px 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .Works .slick-slide{
+    height: 500px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .hi {
+    width: 400px;
+    height: 400px;
+    /* margin: 0px 10px; */
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 20px;
+  }
+  .Works .slick-slide {
+    width: 400px;
+  }
+  .Works .main_container .sub_container .hi .content {
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow:hidden
+  }
+
+  .Works .main_container .sub_container .hi  {
+    perspective: 800px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 480px) {
+
 }
