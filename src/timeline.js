@@ -17,30 +17,40 @@ function Timeline() {
     }
 
 
-    // const progressbar = () => {
-    //     if (value <= 20) {
-    //         return (
 
-    //         )
 
-    //     } else if (value <= 40) {
-    //         return (
+    //화면 사이즈 감지하는 함수
+    const [windowSize, setWindowSize] = useState({
+        width: window.innerWidth
+    })
 
-    //         )
-    //     } else if (value <= 60) {
-    //         return (
+    const handleResize = () => {
+        setWindowSize({
+            width: window.innerWidth
+        })
+    }
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+            console.log(windowSize)
+        }
+    }, [windowSize])
 
-    //         )
-    //     } else if (value <= 80) {
-    //         return (
-
-    //         )
-    //     } else {
-    //         return (
-
-    //         )
-    //     }
-    // }
+    //윈도우 사이즈에 따른 변수설정
+    const bar_value = () => {
+        if(windowSize.width>1200){
+            return 8
+        } else if (windowSize.width>1024){
+            return 7
+        } else if (windowSize.width>768){
+            return 5
+        } else if (windowSize.width>480){
+            return 3.5
+        } else {
+            return 2
+        }
+    }
 
     // 위에 뜨는 문구
     const progressment = () => {
@@ -109,7 +119,7 @@ function Timeline() {
                         <span>{progressment()}</span>
                         <div className='history'>
                             <div className='progressbar'>
-                                <div style={{ width: 9 * value, transition: '1s', overflow: 'hidden' }}>
+                                <div style={{ width: bar_value() * value, transition: '1s', overflow: 'hidden' }}>
                                     <div style={{ height: '1px', width: '0px', backgroundColor: '#22262A' }} className='progressbar_1' color="warning" className="mb-3" >
                                     </div>
                                 </div>
@@ -118,7 +128,7 @@ function Timeline() {
                                 </div>
                             </div>
                             <div className='progressbar1'>
-                                <div style={{ position: 'relative', height: '5px', width: 9 * value, transition: '1s', backgroundColor: '#61DAFB', borderRadius: '50px' }} className='progressbar_1' color="warning" className="mb-3" >
+                                <div style={{ position: 'relative', height: '5px', width: bar_value() * value, transition: '1s', backgroundColor: '#61DAFB', borderRadius: '50px' }} className='progressbar_1' color="warning" className="mb-3" >
                                     <div style={{ position: 'absolute', height: '5px', width: '0px', backgroundColor: '#22262A' }} className='progressbar_1' color="warning" value={value} className="mb-3" />
                                 </div>
                             </div>

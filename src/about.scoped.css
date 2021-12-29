@@ -13,17 +13,21 @@
 
 .about .main_container .sub_container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   height: 100%;
+  padding-left: 300px;
+  padding-right: 100px;
   width: 100%;
+  justify-content: space-around;
+  align-items: center;
 }
 .about .main_container .sub_container .ment {
   width: 400px;
-  height: 100vh;
+  height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 80px;
 }
 
 .about .main_container .sub_container .ment h2{
@@ -41,19 +45,19 @@
 }
 
 .about .main_container .sub_container .photo {
-  margin-left: 300px;
+  width: 500px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .about .main_container .sub_container .photo img {
-  width: 120px;
-  height: 120px;
+  width: 115px;
+  height: 115px;
 }
 
 .about .main_container .sub_container .photo .email {
-  margin : 0px 50px;
+  margin : 0px 0px;
 }
 
 .about .main_container .sub_container .ment h2{
@@ -82,6 +86,7 @@
 .about .main_container .sub_container .photo .git .item {
   backface-visibility: hidden;
   transition: 1s;
+  z-index: 300;
 }
 
 .about .main_container .sub_container .photo .git .item.front {
@@ -151,4 +156,58 @@
 
 .about .main_container .sub_container .photo .kakao:hover .item.back {
   transform: rotateY(0deg);
+}
+
+
+
+/* 미디어 쿼리 */
+
+@media screen and (max-width: 1200px) {
+  .about .main_container .sub_container {
+    padding-left: 200px;
+  }
+  .about .main_container .sub_container .photo {
+    width: 350px;
+  }
+  
+  .about .main_container .sub_container .photo img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .about .main_container .sub_container .ment {
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+    
+  .about .main_container .sub_container .ment h2{
+    margin-bottom: 30px;
+  }
+
+  .about .main_container .sub_container .ment ul{
+    font-size: 0;
+  }
+
+  .about .main_container .sub_container .ment ul li{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+  .about .main_container .sub_container {
+    padding-left: 0px;
+    padding-right: 0px;
+    flex-direction: column;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+
 }

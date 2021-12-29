@@ -109,7 +109,7 @@
 
   .home .main_container .sub_container .ment {
     width: 300px;
-    margin-left: 300px;
+    margin-left: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
