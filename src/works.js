@@ -19,6 +19,7 @@ import reactweb from './static/images/react.png';
 import javascript from './static/images/javascript.png';
 
 function Works() {
+    //슬라이드에 들어갈 내용
     const [workList, setWorkList] = useState([
         {
             title: 'Todolist',
@@ -80,7 +81,7 @@ function Works() {
         }
     ]);
 
-
+    // 슬라이드 틀
     const renderSlides = () =>
         workList.map((item, index) => (
             <div key={index} className='hi'  >
@@ -102,19 +103,19 @@ function Works() {
                             <li>Language  :  {item.use}</li>
                         </ul>
                         <ul id='logo'>
-                            {item.title=='Conady App'?
-                            <>
-                            <li>
-                                <img src={item.img1} />
-                            </li>
-                            <span style={{fontFamily:'Urbanist', fontWeight:'bold', fontSize:'15px', color:'#61DAFB'}}>React-native</span>
-                            </>
-                            :
-                            <li>
-                                <img src={item.img1} />
-                                <img src={item.img2} />
-                                <img src={item.img3} />
-                            </li>
+                            {item.title == 'Conady App' ?
+                                <>
+                                    <li>
+                                        <img src={item.img1} />
+                                    </li>
+                                    <span style={{ fontFamily: 'Urbanist', fontWeight: 'bold', fontSize: '15px', color: '#61DAFB' }}>React-native</span>
+                                </>
+                                :
+                                <li>
+                                    <img src={item.img1} />
+                                    <img src={item.img2} />
+                                    <img src={item.img3} />
+                                </li>
                             }
                         </ul>
                     </div>
@@ -122,13 +123,45 @@ function Works() {
             </div>
         ));
 
+    //화면 사이즈 감지하는 함수
+    const [windowSize, setWindowSize] = useState({
+        width: window.innerWidth
+    })
+
+    const handleResize = () => {
+        setWindowSize({
+            width: window.innerWidth
+        })
+    }
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+            console.log(windowSize)
+        }
+    }, [windowSize])
+
+    //윈도우 사이즈에 따른 캐러샐 개수
+    const bar_value = () => {
+        if (windowSize.width > 1024) {
+            return (
+                <Slider slidesToShow={2}>
+                    {renderSlides()}
+                </Slider>
+            )
+        } else {
+            return (
+                <Slider slidesToShow={1}>
+                    {renderSlides()}
+                </Slider>
+            )
+        }
+    }
     return (
         <div className="Works">
             <div className="main_container">
                 <div className="sub_container">
-                    <Slider slidesToShow={2}>
-                        {renderSlides()}
-                    </Slider>
+                    {bar_value()}
                 </div>
             </div>
         </div>

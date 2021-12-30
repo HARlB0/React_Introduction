@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import run from './static/images/run.png';
 
 function Timeline() {
+
+    //시간에 따른 하단바 길이 설정하는 함수
     let num = 0;
     const [value, setValue] = useState(0);
     const percent = () => {
