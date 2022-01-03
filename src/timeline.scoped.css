@@ -44,7 +44,7 @@
 
 .timeline .main_container .sub_container .TLBox {
   width: 900px;
-  height: 500px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -133,7 +133,6 @@
 	left: 120%;
 }
 
-
 /* 미디어 쿼리 */
 
 @media screen and (max-width: 1200px) {
@@ -166,8 +165,12 @@
     font-size: 30px;
   }
   
-  .timeline .main_container .sub_container .TLBox span div ul li {
+  .timeline .main_container .sub_container .TLBox span div ul #year {
     font-size: 18px;
+  }
+
+  .timeline .main_container .sub_container .TLBox span div ul li {
+    font-size: 15px;
   }
 
 }
@@ -198,8 +201,12 @@
     font-size: 25px;
   }
   
-  .timeline .main_container .sub_container .TLBox span div ul li {
+  .timeline .main_container .sub_container .TLBox span div ul #year {
     font-size: 15px;
+  }
+  
+  .timeline .main_container .sub_container .TLBox span div ul li {
+    font-size: 13px;
   }
 }
 
@@ -230,8 +237,12 @@
     font-size: 20px;
   }
   
-  .timeline .main_container .sub_container .TLBox span div ul li {
+  .timeline .main_container .sub_container .TLBox span div ul #year {
     font-size: 13px;
+  }
+  
+  .timeline .main_container .sub_container .TLBox span div ul li {
+    font-size: 10px;
   }
 
 }
@@ -264,5 +275,9 @@
   
   .timeline .main_container .sub_container .TLBox span div ul li {
     font-size: 10px;
+  }
+
+  .timeline .main_container .sub_container .TLBox span div ul li {
+    font-size: 8px;
   }
 }

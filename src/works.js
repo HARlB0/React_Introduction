@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import "./slick.css";
+import { Link } from 'react-router-dom'
 
 import balook from './static/images/balook.png'
 import conady1 from './static/images/conadyweb.png';
@@ -84,7 +85,7 @@ function Works() {
     // 슬라이드 틀
     const renderSlides = () =>
         workList.map((item, index) => (
-            <div key={index} className='hi'  >
+            <div key={index} className='hi'>
                 <div className='content front'>
                     <div className='top'>
                         {item.title == 'Conady App' ?

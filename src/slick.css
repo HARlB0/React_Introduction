@@ -89,6 +89,10 @@
   width: 100%;
   background-color: #17191b;
   padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .Works .slick-slide {
   display: flex;
@@ -117,6 +121,7 @@
 .Works .main_container .sub_container .hi .content .top1 ul {
   display: flex;
   flex-direction: column;
+  text-align: start;
 }
 
 .Works .main_container .sub_container .hi .content .top1 #logo {
@@ -226,6 +231,7 @@
   height: 100px;
 }
 
+
 @media screen and (max-width: 1200px) {
   .Works .main_container .sub_container {
     margin-left: 200px;
@@ -276,14 +282,32 @@
     perspective: 800px;
   }
   
+  .Works .main_container .sub_container .hi .content .top1 h3 {
+   
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  
+  .Works .main_container .sub_container .hi .content .top1 ul li {
+    font-size: 15px;
+  }
+  
+  .Works .main_container .sub_container .hi .content .top1 ul li img {
+    width: 80px;
+    height: 80px;
+  }
+  .Works .main_container .sub_container .hi .content .top1 #logo {
+    height: 150px;
+  }
+  
 /* 캐러셀 버튼 커스텀 */
 
 .slick-prev:before{
-  left: 20px;
+  left: 0px;
   }
   
 .slick-next:before{
-  left: -41px;
+  left: -31px;
   }
 
 }
@@ -310,12 +334,16 @@
     /* 캐러셀 버튼 커스텀 */
 
     .slick-prev:before{
-      left: 170px;
+      left: -15px;
       }
       
     .slick-next:before{
-      left: -191px;
+      left: -5px;
       }
+      
+    .Works .sub_container > div {
+      width: 415px;
+    }
   }
   
   @media screen and (max-width: 768px) {
@@ -323,7 +351,7 @@
     .Works .main_container .sub_container {
       margin-left: 0px;
     }
-    
+
     .Works .slick-slide {
       display: flex;
       justify-content: center;
@@ -343,10 +371,10 @@
     /* 캐러셀 버튼 커스텀 */
 
     .slick-prev:before{
-      left: 230px;
+      left: 10px;
       }
       
     .slick-next:before{
-      left: -251px;
+      left: -31px;
       }
 }
