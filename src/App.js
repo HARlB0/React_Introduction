@@ -14,6 +14,17 @@ function App() {
   const [scrollIndex, setScrollIndex] = useState('Home');
   const [hamburger, setHamburger] = useState(false);
   const [move, setMove] = useState('');
+
+  //home.js로 버튼 클릭 시 works로 scroll
+  const toggleToWork = () => {
+    outerDivRef.current.scrollTo({
+      top: pageHeight + DIVIDER_HEIGHT,
+      left: 0,
+      behavior: "smooth",
+    });
+    setScrollIndex('Works');
+  }
+
   const pageHeight = window.innerHeight; // 화면 세로길이, 100vh와 같습니다.
   useEffect(() => {
     const wheelHandler = (e) => {
@@ -108,6 +119,8 @@ function App() {
     };
   }, []);
   console.log(useScroll, '스크롤')
+
+
   // left navigation 클릭시 위치 조정
   const fnc = (val) => {
     console.log('눌림', val)
@@ -171,13 +184,13 @@ function App() {
   };
   const Dots = ({ scrollIndex }) => {
     return (
-     
-        <div className="left_bar">
-          <Dot num={'Home'} scrollIndex={scrollIndex}></Dot>
-          <Dot num={'Works'} scrollIndex={scrollIndex}></Dot>
-          <Dot num={'About Me'} scrollIndex={scrollIndex}></Dot>
-          <Dot num={'Timeline'} scrollIndex={scrollIndex}></Dot>
-        </div>
+
+      <div className="left_bar">
+        <Dot num={'Home'} scrollIndex={scrollIndex}></Dot>
+        <Dot num={'Works'} scrollIndex={scrollIndex}></Dot>
+        <Dot num={'About Me'} scrollIndex={scrollIndex}></Dot>
+        <Dot num={'Timeline'} scrollIndex={scrollIndex}></Dot>
+      </div>
     );
   };
   return (
@@ -185,28 +198,24 @@ function App() {
       {/* <Dots scrollIndex={scrollIndex} /> */}
       <div style={{ position: "fixed", height: "100%", display: "flex", alignItems: 'center', backgroundColor: 'transparent' }}>
 
-      {Dots({ scrollIndex })}
+        {Dots({ scrollIndex })}
       </div>
-      {hamburger == true ?
+      {hamburger === true ?
 
         <div className="right_bar">
-          
-            <div className="left_bar1" style={{ display: "flex", flexDirection: 'column', justifyContent: 'flex-end' }}>
-              <div className="hamburger" style={{ zIndex: 500}} onClick={() => { setHamburger(!hamburger) }}>
-                <img style={{ margin: "40px" }} src={more} />
-              </div>
-
-              <div className="ham_list" style={{ height:'100vh'}}>
-                <Dot num={'Home'} scrollIndex={scrollIndex}></Dot>
-                <Dot num={'Works'} scrollIndex={scrollIndex}></Dot>
-                <Dot num={'About Me'} scrollIndex={scrollIndex}></Dot>
-                <Dot num={'Timeline'} scrollIndex={scrollIndex}></Dot>
-              </div>
+          <div className="left_bar1" style={{ display: "flex", flexDirection: 'column', justifyContent: 'flex-end' }}>
+            <div className="hamburger" style={{ zIndex: 500 }} onClick={() => { setHamburger(!hamburger) }}>
+              <img style={{ margin: "40px" }} src={more} />
             </div>
-
+            <div className="ham_list" style={{ height: '100vh' }}>
+              <Dot num={'Home'} scrollIndex={scrollIndex}></Dot>
+              <Dot num={'Works'} scrollIndex={scrollIndex}></Dot>
+              <Dot num={'About Me'} scrollIndex={scrollIndex}></Dot>
+              <Dot num={'Timeline'} scrollIndex={scrollIndex}></Dot>
+            </div>
           </div>
+        </div>
         :
-
         <div style={{ position: "fixed", width: "130px", height: '130px', right: 0, display: "flex", backgroundColor: 'transparent' }}>
           <div className="left_bar1" style={{ display: "flex", flexDirection: 'column', justifyContent: 'flex-end' }}>
             <div className="hamburger" style={{ zIndex: 500 }} onClick={() => { setHamburger(!hamburger) }}>
@@ -214,10 +223,10 @@ function App() {
             </div>
           </div>
         </div>
-
       }
+
       <div className="">
-        <Home />
+        <Home toggleToWork={toggleToWork} />
       </div>
       <div className="divider"></div>
       <div className="">

@@ -2,7 +2,7 @@ import './home.scoped.css';
 import React, { useState, useEffect } from 'react';
 import reactImg from '../src/static/images/react.png'
 
-function Home() {
+function Home(props) {
   // var docStyle = document.documentElement.style;
   // document.addEventListener('mousemove', function (e) {
   //   docStyle.setProperty('--mouse-x', e.clientX);
@@ -36,7 +36,8 @@ function Home() {
           <div className="ment">
             <h2>Hello.<br />{Text}</h2>
             {/* <button>Check out my work</button> */}
-            <button>Check out my work</button>
+            <button onClick={() => { props.toggleToWork() }}>Check out my work</button>
+            {/* <button onClick={() => { window.location.href = 'https://www.naver.com' }}>Check out my work</button> */}
           </div>
           <div className="react_logo">
             <img src={reactImg}></img>

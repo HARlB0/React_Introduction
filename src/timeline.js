@@ -2,23 +2,42 @@ import './timeline.scoped.css';
 import React, { useState, useEffect } from 'react';
 import run from './static/images/run.png';
 
+let num = 0;
+let isStarted = false;
+let isPaused = false;
+
 function Timeline() {
 
     //시간에 따른 하단바 길이 설정하는 함수
-    let num = 0;
+    let timer;
+    let increaseValue = function () {
+        if(isPaused) {
+            clearTimeout(timer)
+        } else {
+            if (num >= 100) {
+                isStarted = false;
+                clearTimeout(timer)
+            } else {
+                setValue(e => e + 1);
+                num++
+                timer = setTimeout(increaseValue, 300)
+            }
+        }
+    }
     const [value, setValue] = useState(0);
     const percent = () => {
-        let timer = setInterval(function () {
-            setValue(e => e + 1);
-            console.log(num)
-            num++
-            if (num == 100) {
-                clearInterval(timer)
-            }
-        }, 300)
+        if(isPaused) isPaused = false;
+        if(!isStarted) {
+            isStarted = true;
+            timer = setTimeout(increaseValue, 300)
+        }
     }
 
-
+    //하단 바 멈추는 함수
+    const pausePercent = () => {
+        isPaused = true
+        timer = null
+    }
 
 
     //화면 사이즈 감지하는 함수
@@ -142,8 +161,9 @@ function Timeline() {
                     </div>
                     <div className='bottom'>
                         <div className='buttons'>
-                            <button onClick={() => { percent(); console.log('hi') }}>Play</button>
-                            <button onClick={() => { setValue(0) }}>Replay</button>
+                            <button onClick={() => { percent();}}>Play</button>
+                            <button onClick={() => { pausePercent(); }}>Pause</button>
+                            <button onClick={() => { setValue(0); num = 0; isPaused = true; isStarted = false; }}>Replay</button>
                         </div>
                     </div>
                 </div>

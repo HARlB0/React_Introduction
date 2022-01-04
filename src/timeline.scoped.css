@@ -132,7 +132,17 @@
 .timeline .main_container .sub_container .buttons button:hover:after {
 	left: 120%;
 }
+.timeline .main_container .sub_container .TLBox span div h2 {
+  font-size: 30px;
+}
 
+.timeline .main_container .sub_container .TLBox span div ul #year {
+  font-size: 18px;
+}
+
+.timeline .main_container .sub_container .TLBox span div ul li {
+  font-size: 15px;
+}
 /* 미디어 쿼리 */
 
 @media screen and (max-width: 1200px) {

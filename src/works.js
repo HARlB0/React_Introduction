@@ -88,7 +88,7 @@ function Works() {
             <div key={index} className='hi'>
                 <div className='content front'>
                     <div className='top'>
-                        {item.title == 'Conady App' ?
+                        {item.title === 'Conady App' ?
                             <img style={{ marginLeft: '50px' }} src={item.url} />
                             :
                             <img src={item.url} />
@@ -104,7 +104,7 @@ function Works() {
                             <li>Language  :  {item.use}</li>
                         </ul>
                         <ul id='logo'>
-                            {item.title == 'Conady App' ?
+                            {item.title === 'Conady App' ?
                                 <>
                                     <li>
                                         <img src={item.img1} />
