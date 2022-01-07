@@ -1,6 +1,6 @@
 import './home.scoped.css';
 import React, { useState, useEffect } from 'react';
-import reactImg from '../src/static/images/react.png'
+import photo from '../src/static/images/증명사진.jpg'
 
 function Home(props) {
   // var docStyle = document.documentElement.style;
@@ -11,7 +11,7 @@ function Home(props) {
 
   // 글씨 타이핑 하는 것 처럼 보이는 효과 
   // https://curryyou.tistory.com/328, https://wazacs.tistory.com/35 참고
-  var txt = 'Let me introduce my self. Thank you for visiting :)'
+  var txt = 'Let me introduce myself. Thank you for visiting :)'
   const [Text, setText] = useState('');
   const [Count, setCount] = useState(0);
 
@@ -40,7 +40,7 @@ function Home(props) {
             {/* <button onClick={() => { window.location.href = 'https://www.naver.com' }}>Check out my work</button> */}
           </div>
           <div className="react_logo">
-            <img src={reactImg}></img>
+            <img src={photo}></img>
           </div>
         </div>
       </div>

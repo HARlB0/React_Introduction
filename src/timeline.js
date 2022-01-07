@@ -1,6 +1,9 @@
 import './timeline.scoped.css';
 import React, { useState, useEffect } from 'react';
 import run from './static/images/run.png';
+import re from './static/images/re.png';
+import stop from './static/images/stop.png';
+import play from './static/images/play.png';
 
 let num = 0;
 let isStarted = false;
@@ -26,11 +29,12 @@ function Timeline() {
     }
     const [value, setValue] = useState(0);
     const percent = () => {
-        if(isPaused) isPaused = false;
-        if(!isStarted) {
-            isStarted = true;
-            timer = setTimeout(increaseValue, 300)
-        }
+            
+            if(!isStarted || isPaused) 
+                if(isPaused) isPaused = false;
+                isStarted = true;
+                timer = setTimeout(increaseValue, 300)
+         
     }
 
     //하단 바 멈추는 함수
@@ -161,9 +165,9 @@ function Timeline() {
                     </div>
                     <div className='bottom'>
                         <div className='buttons'>
-                            <button onClick={() => { percent();}}>Play</button>
-                            <button onClick={() => { pausePercent(); }}>Pause</button>
-                            <button onClick={() => { setValue(0); num = 0; isPaused = true; isStarted = false; }}>Replay</button>
+                            <div onClick={() => { percent();}}><img src={play}/></div>
+                            <div onClick={() => { pausePercent(); }}><img src={stop}/></div>
+                            <div onClick={() => { setValue(0); num = 0; isPaused = true; isStarted = false; }}><img src={re}/></div>
                         </div>
                     </div>
                 </div>
