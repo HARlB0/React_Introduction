@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/React_Introduction/static/css/main.dc9c852f.chunk.css",
-    "main.js": "/React_Introduction/static/js/main.cba00827.chunk.js",
-    "main.js.map": "/React_Introduction/static/js/main.cba00827.chunk.js.map",
+    "main.css": "/React_Introduction/static/css/main.e820c68c.chunk.css",
+    "main.js": "/React_Introduction/static/js/main.3b4036e8.chunk.js",
+    "main.js.map": "/React_Introduction/static/js/main.3b4036e8.chunk.js.map",
     "runtime-main.js": "/React_Introduction/static/js/runtime-main.1c964361.js",
     "runtime-main.js.map": "/React_Introduction/static/js/runtime-main.1c964361.js.map",
     "static/css/2.404545d4.chunk.css": "/React_Introduction/static/css/2.404545d4.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.0f7ab62d.chunk.js.map": "/React_Introduction/static/js/2.0f7ab62d.chunk.js.map",
     "index.html": "/React_Introduction/index.html",
     "static/css/2.404545d4.chunk.css.map": "/React_Introduction/static/css/2.404545d4.chunk.css.map",
-    "static/css/main.dc9c852f.chunk.css.map": "/React_Introduction/static/css/main.dc9c852f.chunk.css.map",
+    "static/css/main.e820c68c.chunk.css.map": "/React_Introduction/static/css/main.e820c68c.chunk.css.map",
     "static/js/2.0f7ab62d.chunk.js.LICENSE.txt": "/React_Introduction/static/js/2.0f7ab62d.chunk.js.LICENSE.txt",
     "static/media/index.scoped.css": "/React_Introduction/static/media/Urbanist-Black.950202e8.ttf",
     "static/media/balook.e5e99cc4.png": "/React_Introduction/static/media/balook.e5e99cc4.png",
@@ -27,17 +27,20 @@
     "static/media/kakao1.ef78993e.png": "/React_Introduction/static/media/kakao1.ef78993e.png",
     "static/media/lama.3f7e71ff.png": "/React_Introduction/static/media/lama.3f7e71ff.png",
     "static/media/more.cbb62aa1.png": "/React_Introduction/static/media/more.cbb62aa1.png",
+    "static/media/play.8e9a9720.png": "/React_Introduction/static/media/play.8e9a9720.png",
+    "static/media/re.fc023d36.png": "/React_Introduction/static/media/re.fc023d36.png",
     "static/media/react.2f4a9b02.png": "/React_Introduction/static/media/react.2f4a9b02.png",
     "static/media/run.76d4fdb9.png": "/React_Introduction/static/media/run.76d4fdb9.png",
     "static/media/slick-theme.css": "/React_Introduction/static/media/slick.c94f7671.ttf",
     "static/media/todolist.e8894337.png": "/React_Introduction/static/media/todolist.e8894337.png",
-    "static/media/tooni.0a3068a8.png": "/React_Introduction/static/media/tooni.0a3068a8.png"
+    "static/media/tooni.0a3068a8.png": "/React_Introduction/static/media/tooni.0a3068a8.png",
+    "static/media/증명사진.a65ea3ef.jpg": "/React_Introduction/static/media/증명사진.a65ea3ef.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.1c964361.js",
     "static/css/2.404545d4.chunk.css",
     "static/js/2.0f7ab62d.chunk.js",
-    "static/css/main.dc9c852f.chunk.css",
-    "static/js/main.cba00827.chunk.js"
+    "static/css/main.e820c68c.chunk.css",
+    "static/js/main.3b4036e8.chunk.js"
   ]
 }
