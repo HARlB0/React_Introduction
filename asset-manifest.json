@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/React_Introduction/static/css/main.8c5f4022.chunk.css",
+    "main.css": "/React_Introduction/static/css/main.2eae4bda.chunk.css",
     "main.js": "/React_Introduction/static/js/main.8fb94f8c.chunk.js",
     "main.js.map": "/React_Introduction/static/js/main.8fb94f8c.chunk.js.map",
     "runtime-main.js": "/React_Introduction/static/js/runtime-main.1c964361.js",
@@ -10,7 +10,7 @@
     "static/js/2.0f7ab62d.chunk.js.map": "/React_Introduction/static/js/2.0f7ab62d.chunk.js.map",
     "index.html": "/React_Introduction/index.html",
     "static/css/2.404545d4.chunk.css.map": "/React_Introduction/static/css/2.404545d4.chunk.css.map",
-    "static/css/main.8c5f4022.chunk.css.map": "/React_Introduction/static/css/main.8c5f4022.chunk.css.map",
+    "static/css/main.2eae4bda.chunk.css.map": "/React_Introduction/static/css/main.2eae4bda.chunk.css.map",
     "static/js/2.0f7ab62d.chunk.js.LICENSE.txt": "/React_Introduction/static/js/2.0f7ab62d.chunk.js.LICENSE.txt",
     "static/media/index.scoped.css": "/React_Introduction/static/media/Urbanist-Black.950202e8.ttf",
     "static/media/balook.e5e99cc4.png": "/React_Introduction/static/media/balook.e5e99cc4.png",
@@ -40,7 +40,7 @@
     "static/js/runtime-main.1c964361.js",
     "static/css/2.404545d4.chunk.css",
     "static/js/2.0f7ab62d.chunk.js",
-    "static/css/main.8c5f4022.chunk.css",
+    "static/css/main.2eae4bda.chunk.css",
     "static/js/main.8fb94f8c.chunk.js"
   ]
 }
