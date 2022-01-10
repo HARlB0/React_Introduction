@@ -4,10 +4,8 @@
   text-decoration: none;
   list-style-type: none;
 }
-
 body {
   margin: 0;
-  overflow-y: hidden;
 }
 
 .outer {
@@ -62,6 +60,7 @@ body {
 .right_bar {
   display: none;
 }
+
 
 @media screen and (max-width: 768px) {
   .outer .left_bar {

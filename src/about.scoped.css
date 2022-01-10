@@ -8,7 +8,7 @@
 .about .main_container {
     width: 100%;
     height: 100vh;
-    background-color: #22262A;
+    background-color: #171a1d;
 }
 
 .about .main_container .sub_container {
@@ -73,7 +73,7 @@
 }
 
 .about .main_container .sub_container .ment #blue {
-  color: #61DAFB;
+  color: #fff459;
   font-weight: bold;
 }
 

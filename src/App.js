@@ -173,7 +173,7 @@ function App() {
         <div onClick={() => { fnc(num) }} style={{
           cursor: 'pointer',
           fontWeight: "bold",
-          color: scrollIndex === num ? "#61DAFB" : "white",
+          color: scrollIndex === num ? "#fff459" : "white",
           fontFamily: "Urbanist",
           fontSize: '17px',
           backgroundColor: 'transparent'

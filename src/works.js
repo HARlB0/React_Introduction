@@ -30,7 +30,8 @@ function Works() {
             img1: html5,
             img2: css3,
             img3: reactweb,
-            period: '2021.12'
+            period: '2021.12',
+            link: 'https://drive.google.com/file/d/1dKQXzlYOlUdtxlDGvsHZE8deu1x4VxYZ/view?usp=sharing'
         },
         {
             title: 'Conady Web',
@@ -40,7 +41,8 @@ function Works() {
             img1: html5,
             img2: css3,
             img3: reactweb,
-            period: '2021.07 ~ 2021.11'
+            period: '2021.07 ~ 2021.11',
+            link:'https://drive.google.com/file/d/1_p8F3vl6sBKIUbrB4S9CIC6mhhw1bGUQ/view?usp=sharing'
         },
         {
             title: 'Conady App',
@@ -48,7 +50,8 @@ function Works() {
             width: 350,
             use: 'React-native',
             img1: reactweb,
-            period: '2021.07 ~ 2021.11'
+            period: '2021.07 ~ 2021.11',
+            link:'https://drive.google.com/file/d/1MkrFn6GDLT9_WRYkCaZmv0u0nNorMKMD/view?usp=sharing'
         },
         {
             title: 'Sollamas',
@@ -58,7 +61,8 @@ function Works() {
             img1: html5,
             img2: css3,
             img3: reactweb,
-            period: '2021.10'
+            period: '2021.10',
+            link:'https://drive.google.com/file/d/19BISNOkMYJQW_BTgd_fPe5IxHTMDTf5c/view?usp=sharing'
         },
         {
             title: 'Tooni',
@@ -68,7 +72,8 @@ function Works() {
             img1: html5,
             img2: css3,
             img3: reactweb,
-            period: '2021.09 ~ 2021.10'
+            period: '2021.09 ~ 2021.10',
+            link:'https://drive.google.com/file/d/1X8oik637P52SIdf4G8ZUgmzj4TaBCn1k/view?usp=sharing'
         },
         {
             title: 'Balook',
@@ -78,7 +83,8 @@ function Works() {
             img1: html5,
             img2: css3,
             img3: javascript,
-            period: '2021.06 ~ 2021.07'
+            period: '2021.06 ~ 2021.07',
+            link:'https://drive.google.com/file/d/1LhRUYf0GXeTY8Ea4pM09EMLyHfM4BAzi/view?usp=sharing'
         }
     ]);
 
@@ -86,8 +92,8 @@ function Works() {
     const renderSlides = () =>
         workList.map((item, index) => (
             <div key={index} className='hi'>
-                <div className='content front'>
-                    <div className='top'>
+                <div className='content front' onClick={() => { window.location.href = `${item.link}` }}>
+                    <div className='top' >
                         {item.title === 'Conady App' ?
                             <img style={{ marginLeft: '50px' }} src={item.url} />
                             :
@@ -96,7 +102,7 @@ function Works() {
                         <span>{item.title}</span>
                     </div>
                 </div>
-                <div className='content back'>
+                <div className='content back' onClick={() => { window.location.href = `${item.link}` }}>
                     <div className='top1'>
                         <h3>{item.title}</h3>
                         <ul>
@@ -109,7 +115,7 @@ function Works() {
                                     <li>
                                         <img src={item.img1} />
                                     </li>
-                                    <span style={{ fontFamily: 'Urbanist', fontWeight: 'bold', fontSize: '15px', color: '#61DAFB' }}>React-native</span>
+                                    <span style={{ fontFamily: 'Urbanist', fontWeight: 'bold', fontSize: '15px', color: '#fff459' }}>React-native</span>
                                 </>
                                 :
                                 <li>

@@ -100,7 +100,7 @@
   color: white;
   border-radius: 50px;
   background-color: transparent;
-  /* border: 3px solid #61DAFB; */
+  /* border: 3px solid #fff459; */
   border-style: none;
   box-shadow: 2px 2px 10px #000000;
 	overflow: hidden;
@@ -143,6 +143,7 @@
 
 .timeline .main_container .sub_container .TLBox span div ul #year {
   font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .timeline .main_container .sub_container .TLBox span div ul li {
@@ -270,7 +271,7 @@
   
   .timeline .main_container .sub_container .TLBox {
     width: 250px;
-    height: 400px;
+    height: 500px;
   } 
   .timeline .main_container .sub_container .history .progressbar {
     width: 200px;
