@@ -170,7 +170,7 @@ function App() {
           alignItems: 'center',
         }}
       >
-        <div onClick={() => { fnc(num) }} style={{
+        <div onClick={() => { fnc(num);setHamburger(false)}} style={{
           cursor: 'pointer',
           fontWeight: "bold",
           color: scrollIndex === num ? "#fff459" : "white",

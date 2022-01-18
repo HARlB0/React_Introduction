@@ -19,7 +19,7 @@
   padding-left: 300px;
   padding-right: 100px;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 .about .main_container .sub_container .ment {

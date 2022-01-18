@@ -115,7 +115,7 @@ function Works() {
                                     <li>
                                         <img src={item.img1} />
                                     </li>
-                                    <span style={{ fontFamily: 'Urbanist', fontWeight: 'bold', fontSize: '15px', color: '#fff459' }}>React-native</span>
+                                    <span style={{ fontFamily: 'Urbanist', fontWeight: 'bold', fontSize: '15px', color: '#61dafb' }}>React-native</span>
                                 </>
                                 :
                                 <li>
