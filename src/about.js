@@ -17,7 +17,7 @@ function About() {
                     <div className="photo">
                         <div className="git">
                             <img className='item front' src={github1} />
-                            <a href='https://github.com/HARlB0'>
+                            <a href='https://github.com/clo-lpT'>
                                 <img className='item back' src={github} />
                             </a>
                         </div>
